@@ -15,7 +15,7 @@ const SignOut = () => {
         <div className="main-content">
           <div className="page-content">
             <MetaTags>
-              <title>Sign Out | Jobcy - Job Listing Template | Themesdesign</title>
+              <title>Sign Out </title>
             </MetaTags>
             <section className="bg-auth">
               <Container>

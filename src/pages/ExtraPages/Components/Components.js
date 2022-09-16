@@ -25,7 +25,7 @@ const Components = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Components | Jobcy - Job Listing Template | Themesdesign</title>
+        <title>Components </title>
       </MetaTags>
       <Section/>
       <section className="section">

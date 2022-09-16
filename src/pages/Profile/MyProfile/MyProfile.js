@@ -9,7 +9,7 @@ const MyProfile = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>My Profile | Jobcy - Job Listing Template | Themesdesign</title>
+        <title>My Profile </title>
       </MetaTags>
       <Section />
       <section className="section">

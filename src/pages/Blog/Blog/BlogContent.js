@@ -129,9 +129,11 @@ const BlogContent = () => {
               <article className="post position-relative">
                 <div className="post ms-lg-4">
                   <p className="text-muted mb-2"><b>Product</b> - Aug 01, 2021</p>
-                  <h5 className="mb-3"><Link to="/blogdetails" className="primary-link">Do traditional landing pages work for Saas startups?</Link></h5>
+                  <h5 className="mb-3"><Link to="/blogdetails" className="primary-link">이력서 잘쓰는법 뭔가 있을까요?</Link></h5>
                   <p className="text-muted">
-                                                Objectively pursue diverse catalysts for change for interoperable meta-services. Distinctively re-engineer revolutionary meta-services and premium architectures. Intrinsically incubate intuitive opportunities and real-time potentialities. Appropriately communicate one-to-one technology.
+                    <i>취업이 갈수록 힘들어지는 것 같은 요즘!</i> <br></br><br></br>
+                    <i>회사에 취업을 위해서는 나를 제대로 알려서 나의 이력과 경력이 회사에 필요한 인재상임을 어필하여야 합니다.</i><br></br><br></br>
+                    <i>그러려면 나의 얼굴이라 할수 있는 이력서 작성요령을 알아보도록 할까요?</i>
                   </p>
                   <div className="d-flex align-items-center mt-4">
                     <div className="flex-shrink-0">
@@ -153,7 +155,7 @@ const BlogContent = () => {
             </div>
           </Col>
 
-          {(blogContentText).map((blogContentDetails, key) => (
+          {/* {(blogContentText).map((blogContentDetails, key) => (
             <Row key={key}>
               {(blogContentDetails.blogRow).map((blogContentInner, key) => (
                 <Col lg={6} key={key}>
@@ -177,9 +179,9 @@ const BlogContent = () => {
                 </Col>
               ))}
             </Row>
-          ))}
+          ))} */}
 
-          <Row >
+          {/* <Row >
             <Col lg={12} className="mt-5">
               <nav aria-label="Page navigation example">
                 <ul className="pagination job-pagination mb-0 justify-content-center">
@@ -200,7 +202,7 @@ const BlogContent = () => {
                 </ul>
               </nav>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
       </section>
 

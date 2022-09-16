@@ -12,7 +12,7 @@ const JobGridHeader = () => {
           <Col lg={3} md={6}>
             <div className="filler-job-form">
               <i className="uil uil-briefcase-alt"></i>
-              <Input type="search" className="form-control filler-job-input-box" id="exampleFormControlInput1" placeholder="Job, Company name... " />
+              <Input type="search" className="form-control filler-job-input-box" id="exampleFormControlInput1" placeholder="직무, 회사명... " />
             </div>
           </Col>
           <Col lg={3} md={6}>

@@ -1,66 +1,39 @@
 import React from 'react';
-import {Container, Row, Col, Card, CardBody} from 'reactstrap';
-import {Link} from 'react-router-dom';
-import {Icon} from '@iconify/react';
+import {Container, Row, Col, Card, Input} from 'reactstrap';
+import {Form} from 'react-bootstrap';
+import Countdown from 'react-countdown';
+// import Image
+import rocketImage from '../../../assets/images/animat-rocket-color.gif';
+
 
 const ServicePage = () => {
-  const servicePage = [
-    {
-      id: 1,
-      serviceIcon: 'uim-object-ungroup',
-      serviceName: 'Manage Job Ads',
-      serviceText: 'We quickly learn to fear and thus automatically avoid potentially stressful situations of all kinds.',
-    },
-    {
-      id: 2,
-      serviceIcon: 'uim-telegram-alt',
-      serviceName: 'Temp Search',
-      serviceText: 'It seems that only fragments of the original text remain in the Lorem Ipsum texts used fragments today.',
-    },
-    {
-      id: 3,
-      serviceIcon: 'uim-airplay',
-      serviceName: 'Display Jobs',
-      serviceText: 'Intrinsically incubate intuitive opportunities and real-time potentialities. Appropriately communicate one-to-one technology.',
-    },
-    {
-      id: 4,
-      serviceIcon: 'uim-rocket',
-      serviceName: 'For Agencies',
-      serviceText: 'At missed advice my it no sister. Miss told ham dull knew see she spot near can. Spirit her entire her called.',
-    },
-    {
-      id: 5,
-      serviceIcon: 'uim-history',
-      serviceName: 'Quick Support',
-      serviceText: 'Designers have a lot of tools to make a story more intersting. You can align your image to the leftcenter with a caption.',
-    },
-    {
-      id: 6,
-      serviceIcon: 'uim-bookmark',
-      serviceName: 'Bookmark Jobs',
-      serviceText: 'Becomes an interactive story that can engage users. Designers have a lot of tools to make a story more intersting.',
-    },
-    {
-      id: 7,
-      serviceIcon: 'uim-layers-alt',
-      serviceName: 'Creative Design',
-      serviceText: 'A business consulting agency is involved in the planning, implementation, and education of businesses. We work directly.',
-    },
-    {
-      id: 8,
-      serviceIcon: 'uim-anchor',
-      serviceName: 'Stratagy & Research',
-      serviceText: 'The most important aspect of beauty was, therefore, an inherent part of an object, rather than something.',
-    },
-    {
-      id: 9,
-      serviceIcon: 'uim-graph-bar',
-      serviceName: 'Real-time Analytics',
-      serviceText: 'This response is important for our ability to learn from mistakes, but it alsogives rise to self-criticism.',
-    },
-
-  ];
+  const renderer = ({days, hours, minutes, seconds, completed}) => {
+    if (completed) {
+      // Render a completed state
+      return <span>You are good to go!</span>;
+    } else {
+      return (
+        <>
+          <div className="countdownlist-item">
+            <div className="count-title">Days</div>
+            <div className="count-num">{days}</div>
+          </div>
+          <div className="countdownlist-item">
+            <div className="count-title">Hours</div>
+            <div className="count-num">{hours}</div>
+          </div>
+          <div className="countdownlist-item">
+            <div className="count-title">Minutes</div>
+            <div className="count-num">{minutes}</div>
+          </div>
+          <div className="countdownlist-item">
+            <div className="count-title">Seconds</div>
+            <div className="count-num">{seconds}</div>
+          </div>
+        </>
+      );
+    }
+  };
   return (
     <React.Fragment>
       <section className="section">
@@ -69,12 +42,30 @@ const ServicePage = () => {
             <Col lg={6}>
               <div className="section-title text-center">
                 <h3 className="title mb-3">Providing our trusted <span className="text-warning">Services</span></h3>
-                <p className="text-muted">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
               </div>
             </Col>
           </Row>
-          <Row>
-            {(servicePage).map((servicePageDetails, key) => (
+          <Row className="justify-content-center">
+            <Col lg={6}>
+              <div className="text-center">
+                <div className="mb-4 pb-3">
+                  <img src={rocketImage} alt="" height="150" className="mg-fluid" />
+                </div>
+                <h1>We are Launching Soon..!!</h1>
+                <p className="text-muted mb-4 pb-3">Start working with Jobcy that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                <div id="countdown" className="d-flex">
+                  <Countdown date="2022/12/31" renderer={renderer} />
+                </div>
+                <Form action="#" className="coming-soon-subacribe mt-4">
+                  <div className="input-group mb-3">
+                    <Input type="text" className="form-control text-dark" placeholder="Enter your email" />
+                    <button className="btn btn-primary" type="button">Subscribe</button>
+                  </div>
+                </Form>
+              </div>
+            </Col>
+          </Row>
+          {/* {(servicePage).map((servicePageDetails, key) => (
               <Col lg={4} md={6} key={key}>
                 <Card className="service-box mt-4 border-0">
                   <CardBody className="p-4">
@@ -91,8 +82,7 @@ const ServicePage = () => {
                   </CardBody>
                 </Card>
               </Col>
-            ))}
-          </Row>
+            ))} */}
         </Container>
       </section>
 

@@ -2,81 +2,13 @@ import React, {useState} from 'react';
 import {Col, Row, Modal, ModalBody, Input, Label} from 'reactstrap';
 import {Link} from 'react-router-dom';
 
-// Job Images
-import jobImage1 from '../../../assets/images/featured-job/img-01.png';
-import jobImage2 from '../../../assets/images/featured-job/img-02.png';
-import jobImage3 from '../../../assets/images/featured-job/img-03.png';
+
+import {jobVacancy} from '../../../assets/data/data';
 
 const JobVacancyPost = () => {
-  // Apply Now Model
   const [modal, setModal] = useState(false);
   const openModal = () => setModal(!modal);
-
-  const jobVacancyPost = [
-    {
-      id: 1,
-      companyImg: jobImage1,
-      jobDescription: 'HTML Developer',
-      experience: '0-2 Yrs Exp.',
-      companyName: 'Jobcy Technology Pvt.Ltd',
-      location: 'California',
-      salary: '$250 - $800 / month',
-      fullTime: true,
-      timing: 'Full Time',
-      addclassNameBookmark: true,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-warning',
-          badgeName: 'Urgent',
-        },
-        {
-          id: 2,
-          badgeclassName: 'bg-soft-info',
-          badgeName: 'Private',
-        },
-      ],
-    },
-    {
-      id: 2,
-      companyImg: jobImage2,
-      jobDescription: 'Marketing Director',
-      experience: '2-4 Yrs Exp.',
-      companyName: 'Creative Agency',
-      location: 'New York',
-      salary: '$250 - $800 / month',
-      partTime: true,
-      timing: 'Full Time',
-      addclassNameBookmark: false,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-info',
-          badgeName: 'Private',
-        },
-      ],
-    },
-    {
-      id: 3,
-      companyImg: jobImage3,
-      jobDescription: 'HTML Developer',
-      experience: '2-4 Yrs Exp.',
-      companyName: 'Jobcy Technology Pvt.Ltd',
-      location: 'California',
-      salary: '$250 - $800 / month',
-      freeLance: true,
-      timing: 'Freelance',
-      addclassNameBookmark: false,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-blue',
-          badgeName: 'Internship',
-        },
-      ],
-
-    },
-  ];
+  const jobVacancyPost = jobVacancy.slice(0, 3);
   return (
     <React.Fragment>
       {jobVacancyPost.map((jobVacancyPostDetails, key) => (

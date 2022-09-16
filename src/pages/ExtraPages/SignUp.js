@@ -16,7 +16,7 @@ const SignUp = () => {
         <div className="main-content">
           <div className="page-content">
             <MetaTags>
-              <title>Sign Up | Jobcy - Job Listing Template | Themesdesign</title>
+              <title>Sign Up </title>
             </MetaTags>
             <section className="bg-auth">
               <Container>

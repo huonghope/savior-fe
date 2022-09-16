@@ -12,7 +12,7 @@
 //   return (
 //     <React.Fragment>
 //       <MetaTags>
-//         <title>Job List2 | Jobcy - Job Listing Template | Themesdesign</title>
+//         <title>Job List2 </title>
 //       </MetaTags>
 //       <Section/>
 //       <section className="section">

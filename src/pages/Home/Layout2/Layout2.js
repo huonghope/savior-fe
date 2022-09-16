@@ -7,7 +7,7 @@ const Layout2 = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Home | Jobcy - Job Listing Template | Themesdesign</title>
+        <title>Home </title>
       </MetaTags>
       <Section/>
       <Home/>

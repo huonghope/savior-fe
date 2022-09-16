@@ -19,7 +19,7 @@ const BlogDetails = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Blog Details | Jobcy - Job Listing Template | Themesdesign</title>
+        <title>Blog Details </title>
       </MetaTags>
       <Section />
       <section className="section">

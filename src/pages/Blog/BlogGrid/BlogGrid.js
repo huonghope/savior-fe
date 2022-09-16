@@ -14,7 +14,7 @@ const BlogGrid = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Blog Grid | Jobcy - Job Listing Template | Themesdesign</title>
+        <title>Blog Grid </title>
       </MetaTags>
       <Section/>
       <section className="section">

@@ -28,20 +28,15 @@ const CompanyTestimonal = () => {
           <Row className="align-items-center">
             <Col lg={5}>
               <div className="section-title mb-5 mb-lg-0">
-                <h4 className="title mb-4">Company Testimonial</h4>
+                <h4 className="title mb-4">이런 분들이 참여하시면 좋습니다</h4>
                 <p className="text-muted">
-                  Our task must be to free ourselves by widening our circle of
-                  compassion to embrace all living creatures Integer varius
-                  lacus non magna tempor congue natuasre the whole its beauty
-                  you vestibulum egestas them feel.
+                  아직은 잘 모르는, 잘 알려지지 않은 취업 때문에 슬픔의 늪에 빠져있는 청년들의 마음을 치유해주고 구직 교육까지, 기회를 잡을 수 있도록 트레이닝 시켜주는 플랫폼
                 </p>
                 <ul className="list-unstyled about-list text-muted mt-4">
-                  <li>Digital Marketing Solutions for Tomorrow.</li>
-                  <li>Our Talented & Experienced Marketing Agency.</li>
-                  <li>Create your own skin to match your brand.</li>
-                  <li>
-                    It is said that song composers of the past used texts.
-                  </li>
+                  <li>자신감을 높이고 싶은 분</li>
+                  <li>인간관계 적응 및 의사소통을 더 잘 하고 싶은 분</li>
+                  <li>취업에 대해 도움이 필요하신 분</li>
+                  <li>나에 대해 알아보고 자기성장을 하고 싶은 분</li>
                 </ul>
                 <div className="d-flex align-items-center justify-content-between mt-4">
                   <div>

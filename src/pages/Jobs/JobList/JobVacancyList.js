@@ -1,161 +1,15 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Col, Input, Label, Row, Modal, ModalBody} from 'reactstrap';
+import {jobVacancy} from '../../../assets/data/data';
 
-
-// Images Import
-import jobImage1 from '../../../assets/images/featured-job/img-01.png';
-import jobImage2 from '../../../assets/images/featured-job/img-02.png';
-import jobImage3 from '../../../assets/images/featured-job/img-03.png';
-import jobImage4 from '../../../assets/images/featured-job/img-04.png';
-import jobImage5 from '../../../assets/images/featured-job/img-05.png';
-import jobImage6 from '../../../assets/images/featured-job/img-06.png';
-import jobImage7 from '../../../assets/images/featured-job/img-07.png';
 
 const JobVacancyList = () => {
   // Apply Now Model
   const [modal, setModal] = useState(false);
   const openModal = () => setModal(!modal);
+  const jobVacancyList = jobVacancy;
 
-  const jobVacancyList = [
-    {
-      id: 1,
-      companyImg: jobImage1,
-      jobDescription: 'Product Director',
-      companyName: 'Creative Agency',
-      location: ' Escondido,California',
-      jobPostTime: '3 min ago',
-      fullTime: true,
-      timing: 'Full Time',
-      addclassNameBookmark: false,
-      badges: [],
-      experience: '2 - 3 years',
-    },
-    {
-      id: 2,
-      companyImg: jobImage2,
-      jobDescription: 'Digital Marketing Manager',
-      companyName: 'Jobcy Technology Pvt.Ltd',
-      location: 'Phoenix, Arizona',
-      jobPostTime: '15 min ago',
-      fullTime: true,
-      timing: 'Full Time',
-      catogary: 'Recent Jobs',
-      addclassNameBookmark: true,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-warning',
-          badgeName: 'Urgent',
-        },
-        {
-          id: 2,
-          badgeclassName: 'bg-soft-purple',
-          badgeName: 'Freelance',
-        },
-      ],
-      experience: '4+ years',
-    },
-    {
-      id: 3,
-      companyImg: jobImage3,
-      jobDescription: 'Product Director',
-      companyName: 'Creative Agency',
-      location: ' Escondido,California',
-      jobPostTime: '37 min ago',
-      fullTime: true,
-      timing: 'Full Time',
-      addclassNameBookmark: false,
-      badges: [],
-      experience: '2 - 3 years',
-    },
-    {
-      id: 4,
-      companyImg: jobImage4,
-      jobDescription: 'Product Director',
-      companyName: 'Creative Agency',
-      location: ' Escondido,California',
-      jobPostTime: '50 min ago',
-      freeLance: true,
-      timing: 'Freelance',
-      addclassNameBookmark: false,
-      badges: [],
-      experience: '2 - 3 years',
-    },
-    {
-      id: 5,
-      companyImg: jobImage5,
-      jobDescription: 'Product Director',
-      companyName: 'Creative Agency',
-      location: ' Escondido,California',
-      jobPostTime: '1 month ago',
-      partTime: true,
-      timing: 'Part Time',
-      addclassNameBookmark: true,
-      badges: [],
-      experience: '2 - 3 years',
-    },
-    {
-      id: 6,
-      companyImg: jobImage6,
-      jobDescription: 'Product Director',
-      companyName: 'Creative Agency',
-      location: 'Escondido, California',
-      jobPostTime: '2 month ago',
-      freeLance: true,
-      timing: 'Freelance',
-      addclassNameBookmark: false,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-warning',
-          badgeName: 'Urgent',
-        },
-      ],
-      experience: '2-3 years',
-
-    },
-    {
-      id: 7,
-      companyImg: jobImage7,
-      jobDescription: 'Product Director',
-      companyName: 'Creative Agency',
-      location: 'Escondido, California',
-      jobPostTime: '2 month ago',
-      partTime: true,
-      timing: 'Part Time',
-      addclassNameBookmark: false,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-warning',
-          badgeName: 'Urgent',
-        },
-      ],
-      experience: '2-3 years',
-
-    },
-    {
-      id: 8,
-      companyImg: jobImage3,
-      jobDescription: 'Product Director',
-      companyName: 'Creative Agency',
-      location: 'Escondido, California',
-      jobPostTime: '3 month ago',
-      internship: true,
-      timing: 'Internship',
-      addclassNameBookmark: false,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-warning',
-          badgeName: 'Private',
-        },
-      ],
-      experience: '2-3 years',
-
-    },
-  ];
   return (
     <React.Fragment>
       <div>
@@ -181,7 +35,7 @@ const JobVacancyList = () => {
 
                 <Col md={3}>
                   <div className="mb-2 mb-md-0">
-                    <h5 className="fs-18 mb-0"><Link to="/jobdetails" className="text-dark">{jobVacancyListDetails.jobDescription}</Link></h5>
+                    <h5 className="fs-18 mb-0"><Link to={`/jobdetails?id=${jobVacancyListDetails.id}`} className="text-dark">{jobVacancyListDetails.jobDescription}</Link></h5>
                     <p className="text-muted fs-14 mb-0">{jobVacancyListDetails.companyName}</p>
                   </div>
                 </Col>

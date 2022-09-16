@@ -7,7 +7,7 @@ const Faqs = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>FAQs | Jobcy - Job Listing Template | Themesdesign</title>
+        <title>FAQs </title>
       </MetaTags>
       <Section/>
       <FaqContent/>

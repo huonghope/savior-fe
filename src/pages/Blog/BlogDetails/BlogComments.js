@@ -24,7 +24,7 @@ const BlogComments = () => {
               <Link to="#" className="text-primary"><i
                 className="mdi mdi-reply"></i> Reply</Link>
             </div>
-            <p className="text-muted fst-italic mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+            <p className="text-muted fst-italic mb-0">좋은 정보를 주셔서 감사합니다.</p>
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@ const BlogComments = () => {
               <Link to="#" className="text-primary"><i
                 className="mdi mdi-reply"></i> Reply</Link>
             </div>
-            <p className="text-muted fst-italic mb-0">The most important aspect of beauty was, therefore, an inherent part of an object, rather than something applied superficially, and was based on universal, recognisable truths.</p>
+            <p className="text-muted fst-italic mb-0">좋은 정보를 주셔서 감사합니다.</p>
 
             <div className="d-sm-flex align-items-top mt-5">
               <div className="flex-shrink-0">
@@ -55,7 +55,7 @@ const BlogComments = () => {
                   <Link to="#" className="text-primary"><i
                     className="mdi mdi-reply"></i> Reply</Link>
                 </div>
-                <p className="text-muted fst-italic mb-0">This response is important for our ability to learn from mistakes, but it alsogives rise to self-criticism, because it is part of the threat-protection system. </p>
+                <p className="text-muted fst-italic mb-0">좋은 정보를 주셔서 감사합니다. </p>
               </div>
             </div>
           </div>

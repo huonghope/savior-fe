@@ -1,108 +1,18 @@
 import React, {useState} from 'react';
 import {Col, Row, Modal, ModalBody, Input, Label} from 'reactstrap';
 import {Link} from 'react-router-dom';
-
-// Job Images
-import jobImage1 from '../../../assets/images/featured-job/img-01.png';
-import jobImage2 from '../../../assets/images/featured-job/img-02.png';
-import jobImage3 from '../../../assets/images/featured-job/img-03.png';
-import jobImage4 from '../../../assets/images/featured-job/img-04.png';
-
+import {jobVacancy} from '../../../assets/data/data';
 
 const JobVacancy = () => {
   // Apply Now Model
   const [modal, setModal] = useState(false);
   const openModal = () => setModal(!modal);
 
-  const jobVacancy = [
-    {
-      id: 1,
-      companyImg: jobImage1,
-      jobDescription: 'Magento Developer',
-      experience: '0-2 Yrs Exp.',
-      companyName: 'Jobcy Technology Pvt.Ltd',
-      location: 'California',
-      salary: '$250 - $800 / month',
-      fullTime: true,
-      timing: 'Full Time',
-      addclassNameBookmark: true,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-warning',
-          badgeName: 'Urgent',
-        },
-        {
-          id: 2,
-          badgeclassName: 'bg-soft-info',
-          badgeName: 'Private',
-        },
-      ],
-    },
-    {
-      id: 2,
-      companyImg: jobImage2,
-      jobDescription: 'Marketing Director',
-      experience: '2-4 Yrs Exp.',
-      companyName: 'Jobcy Technology Pvt.Ltd',
-      location: 'New York',
-      salary: '$250 - $800 / month',
-      partTime: true,
-      timing: 'Full Time',
-      addclassNameBookmark: false,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-info',
-          badgeName: 'Private',
-        },
-      ],
-    },
-    {
-      id: 3,
-      companyImg: jobImage3,
-      jobDescription: 'HTML Developer',
-      experience: '2-4 Yrs Exp.',
-      companyName: 'Jobcy Technology Pvt.Ltd',
-      location: 'California',
-      salary: '$250 - $800 / month',
-      freeLance: true,
-      timing: 'Freelance',
-      addclassNameBookmark: false,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-blue',
-          badgeName: 'Internship',
-        },
-      ],
-
-    },
-    {
-      id: 4,
-      companyImg: jobImage4,
-      jobDescription: 'Product Sales Specialist',
-      experience: '5+ Yrs Exp.',
-      companyName: 'Jobcy Technology Pvt.Ltd',
-      location: 'California',
-      salary: '$250 - $800 / month',
-      fullTime: true,
-      timing: 'Freelance',
-      addclassNameBookmark: true,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-info',
-          badgeName: 'Private',
-        },
-      ],
-
-    },
-  ];
+  const jobVacancyResult = jobVacancy.slice(0, 4);
 
   return (
     <React.Fragment>
-      {jobVacancy.map((jobVacancyDetails, key) => (
+      {jobVacancyResult.map((jobVacancyDetails, key) => (
         <div
           key={key}
           className={
@@ -113,13 +23,13 @@ const JobVacancy = () => {
         >
           <div className="p-4">
             <Row >
-              <Col lg={2}>
+              <Col lg={5}>
                 <Link to="/companydetails"><img src={jobVacancyDetails.companyImg} alt="" className="img-fluid rounded-3" /></Link>
               </Col>
-              <Col lg={10}>
+              <Col lg={7}>
                 <div className="mt-3 mt-lg-0">
                   <h5 className="fs-17 mb-1">
-                    <Link to="/jobdetails" className="text-dark">{jobVacancyDetails.jobDescription}</Link>
+                    <Link to={`/jobdetails?id=${jobVacancyDetails.id}`} className="text-dark">{jobVacancyDetails.jobDescription}</Link>
                     <small className="text-muted fw-normal">({jobVacancyDetails.experience})</small></h5>
                   <ul className="list-inline mb-0">
                     <li className="list-inline-item">
@@ -160,7 +70,7 @@ const JobVacancy = () => {
                 </div>
               </Col>
             </Row>
-            <div className="favorite-icon">
+            <div className="favorite-icon" style={{left: '15px', position: 'relative'}}>
               <Link to="#"><i className="uil uil-heart-alt fs-18"></i></Link>
             </div>
           </div>
@@ -169,16 +79,14 @@ const JobVacancy = () => {
               <Col md={8}>
                 <div>
                   <ul className="list-inline mb-0">
-                    <li className="list-inline-item"><i className="uil uil-tag"></i> Keywords :</li>
-                    <li className="list-inline-item"><Link to="#" className="primary-link text-muted">Ui designer</Link>,</li>
-                    <li className="list-inline-item"><Link to="#" className="primary-link text-muted">developer</Link></li>
+                    <li className="list-inline-item"><i className="uil uil-tag"></i><span style={{color: 'red'}}>입사지원</span></li>
                   </ul>
                 </div>
               </Col>
 
               <Col md={4} >
                 <div className="text-md-end">
-                  <Link to="#applyNow" onClick={openModal} className="primary-link">Apply Now <i className="mdi mdi-chevron-double-right"></i></Link>
+                  <Link to="#applyNow" onClick={openModal} className="primary-link">지금 지원 <i className="mdi mdi-chevron-double-right"></i></Link>
                 </div>
               </Col>
             </Row>

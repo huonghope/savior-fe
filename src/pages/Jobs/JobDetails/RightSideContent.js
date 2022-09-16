@@ -2,14 +2,10 @@ import React, {useState} from 'react';
 import {Modal, ModalBody, Input, Label, Card, CardBody} from 'reactstrap';
 import {Link} from 'react-router-dom';
 
-// Import Images
-import jobImages2 from '../../../assets/images/featured-job/img-02.png';
-
-const RightSideContent = () => {
+const RightSideContent = ({jobInformation}) => {
   // Apply Now Model
   const [modal, setModal] = useState(false);
   const openModal = () => setModal(!modal);
-
   return (
     <React.Fragment>
       <div className="side-bar ms-lg-4">
@@ -22,7 +18,7 @@ const RightSideContent = () => {
                   <i className="uil uil-user icon bg-soft-primary"></i>
                   <div className="ms-3">
                     <h6 className="fs-14 mb-2">Job Title</h6>
-                    <p className="text-muted mb-0">Product Designer</p>
+                    <p className="text-muted mb-0">{jobInformation.jobDescription}</p>
                   </div>
                 </div>
               </li>
@@ -31,7 +27,7 @@ const RightSideContent = () => {
                   <i className="uil uil-star-half-alt icon bg-soft-primary"></i>
                   <div className="ms-3">
                     <h6 className="fs-14 mb-2">Experience</h6>
-                    <p className="text-muted mb-0"> 0-3 Years</p>
+                    <p className="text-muted mb-0">{jobInformation.experience}</p>
                   </div>
                 </div>
               </li>
@@ -40,7 +36,7 @@ const RightSideContent = () => {
                   <i className="uil uil-location-point icon bg-soft-primary"></i>
                   <div className="ms-3">
                     <h6 className="fs-14 mb-2">Location</h6>
-                    <p className="text-muted mb-0"> New york</p>
+                    <p className="text-muted mb-0">{jobInformation.location}</p>
                   </div>
                 </div>
               </li>
@@ -49,7 +45,7 @@ const RightSideContent = () => {
                   <i className="uil uil-usd-circle icon bg-soft-primary"></i>
                   <div className="ms-3">
                     <h6 className="fs-14 mb-2">Offered Salary</h6>
-                    <p className="text-muted mb-0">$35k - $45k</p>
+                    <p className="text-muted mb-0">{jobInformation.salary}</p>
                   </div>
                 </div>
               </li>
@@ -67,7 +63,7 @@ const RightSideContent = () => {
                   <i className="uil uil-building icon bg-soft-primary"></i>
                   <div className="ms-3">
                     <h6 className="fs-14 mb-2">Industry</h6>
-                    <p className="text-muted mb-0">Private</p>
+                    <p className="text-muted mb-0">{jobInformation.timing}</p>
                   </div>
                 </div>
               </li>
@@ -91,10 +87,10 @@ const RightSideContent = () => {
         <Card className="company-profile mt-4">
           <CardBody className="p-4">
             <div className="text-center">
-              <img src={jobImages2} alt="" className="img-fluid rounded-3" />
+              <img src={jobInformation.companyImg} alt="" className="img-fluid rounded-3" />
 
               <div className="mt-4">
-                <h6 className="fs-17 mb-1">Jobcy Technology Pvt.Ltd</h6>
+                <h6 className="fs-17 mb-1">{jobInformation.companyName}</h6>
                 <p className="text-muted">Since July 2017</p>
               </div>
             </div>
@@ -104,7 +100,7 @@ const RightSideContent = () => {
                   <i className="uil uil-phone-volume text-primary fs-4"></i>
                   <div className="ms-3">
                     <h6 className="fs-14 mb-2">Phone</h6>
-                    <p className="text-muted fs-14 mb-0">+589 560 56555</p>
+                    <p className="text-muted fs-14 mb-0">Updating</p>
                   </div>
                 </div>
               </li>
@@ -113,7 +109,7 @@ const RightSideContent = () => {
                   <i className="uil uil-envelope text-primary fs-4"></i>
                   <div className="ms-3">
                     <h6 className="fs-14 mb-2">Email</h6>
-                    <p className="text-muted fs-14 mb-0">pixltechnology@info.com</p>
+                    <p className="text-muted fs-14 mb-0">Updating</p>
                   </div>
                 </div>
               </li>
@@ -122,7 +118,7 @@ const RightSideContent = () => {
                   <i className="uil uil-globe text-primary fs-4"></i>
                   <div className="ms-3">
                     <h6 className="fs-14 mb-2">Website</h6>
-                    <p className="text-muted fs-14 text-break mb-0">www.Jobcytechnology.pvt.ltd.com</p>
+                    <p className="text-muted fs-14 text-break mb-0">Updating</p>
                   </div>
                 </div>
               </li>
@@ -131,7 +127,7 @@ const RightSideContent = () => {
                   <i className="uil uil-map-marker text-primary fs-4"></i>
                   <div className="ms-3">
                     <h6 className="fs-14 mb-2">Location</h6>
-                    <p className="text-muted fs-14 mb-0">Oakridge Lane Richardson.</p>
+                    <p className="text-muted fs-14 mb-0">{jobInformation.location}</p>
                   </div>
                 </div>
               </li>
@@ -146,7 +142,7 @@ const RightSideContent = () => {
           <h6 className="fs-16 mb-3">Job location</h6>
           <iframe title="maps"
             // eslint-disable-next-line max-len
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1628067715234!5m2!1sen!2sin" style={{width: `100%`, height: `250`}} allowFullScreen="" loading="lazy"></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202408.1137750431!2d126.97408630000001!3d37.563856099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2012d5c39cf%3A0x7e11eca1405bf29b!2sSeoul!5e0!3m2!1sen!2skr!4v1663327136063!5m2!1sen!2skr" style={{width: `100%`, height: `250`}} allowFullScreen="" loading="lazy"></iframe>
         </div>
         <div className="modal fade" id="applyNow" tabIndex="-1" aria-labelledby="applyNow" aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered">

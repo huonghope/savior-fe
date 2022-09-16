@@ -17,6 +17,7 @@ import classname from 'classnames';
 
 import darkLogo from '../../assets/images/logo-dark.png';
 import lightLogo from '../../assets/images/logo-light.png';
+import logo from '../../assets/images/logo.png';
 import userImage2 from '../../assets/images/user/img-02.jpg';
 import jobImage4 from '../../assets/images/featured-job/img-04.png';
 import userImage1 from '../../assets/images/user/img-01.jpg';
@@ -122,8 +123,7 @@ const NavBar = (props) => {
       <nav className={'navbar navbar-expand-lg fixed-top sticky p-0 ' + navClass} id="navigation">
         <Container fluid className="custom-container">
           <Link className="navbar-brand text-dark fw-bold me-auto" to="/">
-            <img src={darkLogo} height="22" alt="" className="logo-dark" />
-            <img src={lightLogo} height="22" alt="" className="logo-light" />
+            <img src={logo} height="45" alt="" className="logo-dark" />
           </Link>
           <div>
             <NavbarToggler className="me-3" type="button" onClick={() => toggle()}>
@@ -144,13 +144,13 @@ const NavBar = (props) => {
                   <li><Link className="dropdown-item" to="/services">Services</Link></li>
                   <li><Link className="dropdown-item" to="/team">Team</Link></li>
                   <li><Link className="dropdown-item" to="/pricing">Pricing</Link></li>
-                  <Link className="dropdown-item" to="/privacyandpolicy">Priacy & Policy</Link>
-                  <li><Link className="dropdown-item" to="/faqs">Faqs</Link></li>
+                  {/* <Link className="dropdown-item" to="/privacyandpolicy">Priacy & Policy</Link> */}
+                  {/* <li><Link className="dropdown-item" to="/faqs">Faqs</Link></li> */}
                 </ul>
               </NavItem>
               <li className="nav-item dropdown dropdown-hover">
                 <Link to="/#" id="pagesdoropdown" className="nav-link dropdown-toggle arrow-none" onClick={() => setPages(!pages)}>
-                                    Pages
+                Service
                   <div className="arrow-down"></div>
                 </Link>
                 <div className={classname('dropdown-menu dropdown-menu-lg dropdown-menu-center', {show: pages})} aria-labelledby="pagesdoropdown">
@@ -158,9 +158,9 @@ const NavBar = (props) => {
                     <Col lg={4}>
                       <span className="dropdown-header">Jobs</span>
                       <div>
-                        <Link className="dropdown-item" to="/joblist2">Job List</Link>
+                        {/* <Link className="dropdown-item" to="/joblist2">Job List</Link> */}
                         {/* <Link className="dropdown-item" to="/joblist2">Job List-2</Link> */}
-                        <Link className="dropdown-item" to="/jobgrid">Job Grid</Link>
+                        <Link className="dropdown-item" to="/jobgrid">Jobs</Link>
                         {/* <Link className="dropdown-item" to="/jobgrid2">Job Grid-2</Link> */}
                         <Link className="dropdown-item" to="/jobdetails">Job Details</Link>
                         <Link className="dropdown-item" to="/jobscategories">Jobs Categories</Link>
@@ -169,8 +169,8 @@ const NavBar = (props) => {
                     <Col lg={4}>
                       <span className="dropdown-header">Candidates / Companys</span>
                       <div>
-                        <Link className="dropdown-item" to="/candidatelist">Candidate List</Link>
-                        <Link className="dropdown-item" to="/candidategrid">Candidate Grid</Link>
+                        {/* <Link className="dropdown-item" to="/candidatelist">Candidate List</Link> */}
+                        <Link className="dropdown-item" to="/candidategrid">Candidate List</Link>
                         <Link className="dropdown-item" to="/candidatedetails">Candidate Details</Link>
                         <Link className="dropdown-item" to="/companylist">Company List</Link>
                         <Link className="dropdown-item" to="/companydetails">Company Details</Link>
@@ -198,11 +198,12 @@ const NavBar = (props) => {
                 </NavLink>
                 <ul className={classname('dropdown-menu dropdown-menu-center', {show: blog})} aria-labelledby="productdropdown">
                   <li><Link className="dropdown-item" to="/blog">Blog</Link></li>
-                  <li><Link className="dropdown-item" to="/bloggrid">Blog Grid</Link></li>
-                  <li><Link className="dropdown-item" to="/blogmodern">Blog Modern</Link></li>
-                  <li><Link className="dropdown-item" to="/blogmasonary">Blog Masonry</Link></li>
-                  <li><Link className="dropdown-item" to="/blogdetails">Blog details</Link></li>
-                  <li><Link className="dropdown-item" to="/blogauther">Blog Author</Link></li>
+                  {/* <li><Link className="dropdown-item" to="/bloggrid">Blog Grid</Link></li> */}
+                  {/* <li><Link className="dropdown-item" to="/blogmodern">Blog Modern</Link></li> */}
+                  {/* <li><Link className="dropdown-item" to="/blogmasonary">Blog Masonry</Link></li> */}
+
+                  {/* <li><Link className="dropdown-item" to="/blogdetails">Blog Details</Link></li> */}
+                  {/* <li><Link className="dropdown-item" to="/blogauther">Blog Author</Link></li> */}
                 </ul>
               </NavItem>
               <NavItem>
@@ -293,7 +294,7 @@ const NavBar = (props) => {
                 </div>
                 <div className="notification-footer border-top text-center">
                   <Link className="primary-link fs-13" to="#">
-                    <i className="mdi mdi-arrow-right-circle me-1"></i> <span>View More..</span>
+                    <i className="mdi mdi-arrow-right-circle me-1"></i> <span>더 보기..</span>
                   </Link>
                 </div>
               </DropdownMenu>
@@ -305,7 +306,7 @@ const NavBar = (props) => {
               className="list-inline-item">
               <DropdownToggle to="#" className="header-item" id="userdropdown" type="button" tag="a"
                 aria-expanded="false">
-                <img src={profileImage} alt="mdo" width="35" height="35" className="rounded-circle me-1" /> <span className="d-none d-md-inline-block fw-medium">Hi, Jennifer</span>
+                <img src={profileImage} alt="mdo" width="35" height="35" className="rounded-circle me-1" /> <span className="d-none d-md-inline-block fw-medium">Hi, User</span>
               </DropdownToggle>
               <DropdownMenu className="dropdown-menu-end" aria-labelledby="userdropdown" end>
                 <li><Link className="dropdown-item" to="/managejobs">Manage Jobs</Link></li>

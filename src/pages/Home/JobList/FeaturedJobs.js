@@ -3,89 +3,13 @@ import {Col, Row, Modal, ModalBody, Input, Label} from 'reactstrap';
 import {Link} from 'react-router-dom';
 
 // jobImages
-import jobImage1 from '../../../assets/images/featured-job/img-01.png';
-import jobImage2 from '../../../assets/images/featured-job/img-02.png';
-import jobImage3 from '../../../assets/images/featured-job/img-03.png';
-import jobImage4 from '../../../assets/images/featured-job/img-04.png';
+import {jobVacancy} from '../../../assets/data/data';
 
 const FeaturedJobs = () => {
   // Apply Now Model
   const [modal, setModal] = useState(false);
   const openModal = () => setModal(!modal);
-  const featuredJobs = [
-    {
-      id: 1,
-      companyImg: jobImage1,
-      jobDescription: 'Web Developer',
-      companyName: 'Web Technology pvt.Ltd',
-      location: 'Oakridge Lane ssRichardson',
-      salary: '1000-1200/m',
-      fullTime: true,
-      timing: 'Full Time',
-      catogary: 'Featured Jobs',
-      addclassNameBookmark: true,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-info',
-          badgeName: 'Private',
-        },
-        {
-          id: 2,
-          badgeclassName: 'bg-soft-warning',
-          badgeName: 'Urgent',
-        },
-      ],
-      experience: '1 - 2 years',
-      Notes: 'languages only differ in their grammar.',
-    },
-    {
-      id: 2,
-      companyImg: jobImage2,
-      jobDescription: 'Business Associate',
-      companyName: 'Pixel Technology pvt.Ltd',
-      location: 'Dodge City, Louisiana',
-      salary: '800-1800/m',
-      partTime: true,
-      timing: 'Part Time',
-      catogary: 'Featured Jobs',
-      addclassNameBookmark: false,
-      badges: [],
-      experience: '0 - 1 years',
-      Notes: 'languages only differ in their grammar.',
-    },
-    {
-      id: 3,
-      companyImg: jobImage3,
-      jobDescription: 'Digital Marketing Manager',
-      companyName: 'Jobcy Technology Pvt.Ltd',
-      location: 'Phoenix, Arizona',
-      salary: '1500-2400/m',
-      freelancer: true,
-      timing: 'Freelancer',
-      catogary: 'Featured Jobs',
-      addclassNameBookmark: true,
-      badges: [],
-      experience: '4+ years',
-      Notes: null,
-    },
-    {
-      id: 4,
-      companyImg: jobImage4,
-      jobDescription: 'Product Director',
-      companyName: 'Creative Agency',
-      location: 'Escondido, California',
-      salary: '1500-2400/m',
-      fullTime: true,
-      timing: 'Full Time',
-      catogary: 'Featured Jobs',
-      addclassNameBookmark: false,
-      badges: [],
-      experience: '2 - 4 years',
-      Notes: null,
-    },
-  ];
-
+  const featuredJobs = jobVacancy.slice(4, 9);
   return (
     <React.Fragment>
       {(featuredJobs || []).map((featuredJobdetails, key) => (
@@ -217,7 +141,7 @@ const FeaturedJobs = () => {
       ))}
       <div className="text-center mt-4 pt-2">
         <Link to="/joblist" className="btn btn-primary">
-          View More <i className="uil uil-arrow-right"></i>
+          더 보기 <i className="uil uil-arrow-right"></i>
         </Link>
       </div>
       <div className="modal fade" id="applyNow" tabIndex="-1" aria-labelledby="applyNow" aria-hidden="true">

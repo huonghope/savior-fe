@@ -8,49 +8,49 @@ const Jobcatogaries = () => {
     {
       id: 1,
       icon: 'uim-layers-alt',
-      name: 'IT & Software',
+      name: '기확-전략',
       job: 2024,
     },
     {
       id: 2,
       icon: 'uim-airplay',
-      name: 'Technology',
+      name: '마케팅-홍보-조사',
       job: 1250,
     },
     {
       id: 3,
       icon: 'uim-bag',
-      name: 'Government',
+      name: '회계-세무-재무',
       job: 802,
     },
     {
       id: 4,
       icon: 'uim-user-md',
-      name: 'Accounting / Finance',
+      name: 'IT개발-데이터',
       job: 577,
     },
     {
       id: 5,
       icon: 'uim-hospital',
-      name: 'Construction / Facilities',
+      name: '디자인',
       job: 285,
     },
     {
       id: 6,
       icon: 'uim-telegram-alt',
-      name: 'Tele-communications',
+      name: '고객상담-TM',
       job: 495,
     },
     {
       id: 7,
       icon: 'uim-scenery',
-      name: 'Design & Multimedia',
+      name: '상품기획-MD',
       job: 1045,
     },
     {
       id: 8,
       icon: 'uim-android-alt',
-      name: 'Human Resource',
+      name: '서비스-교육',
       job: 1516,
     },
 
@@ -62,9 +62,10 @@ const Jobcatogaries = () => {
           <Row className="justify-content-center">
             <Col lg={6}>
               <div className="section-title text-center">
-                <h3 className="title">Browser Jobs Categories </h3>
-                <p className="text-muted">Post a job to tell us about your project. We will quickly match you with the
-                                    right freelancers.</p>
+                <h3 className="title">가장 많이 찾은 직무 리스트 </h3>
+                <p className="text-muted">사용자의 이력서를 업데이트 해주시면
+                  <br></br>
+                적합하는 이력서를 분석해주면 적합한 직무를 빠르게 연결해 드리겠습니다.</p>
               </div>
             </Col>
           </Row>
@@ -90,7 +91,7 @@ const Jobcatogaries = () => {
           <Row>
             <Col lg={12}>
               <div className="mt-5 text-center">
-                <Link to="/jobscategories" className="btn btn-primary btn-hover">Browse All Categories <i className="uil uil-arrow-right"></i></Link>
+                <Link to="/jobscategories" className="btn btn-primary btn-hover"> 모든 직무 케테고리 보기<i className="uil uil-arrow-right"></i></Link>
               </div>
             </Col>
           </Row>

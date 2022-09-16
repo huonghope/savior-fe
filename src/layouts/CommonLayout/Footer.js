@@ -14,11 +14,6 @@ const Footer = () => {
           subTitle: 'About Us',
         },
         {
-          id: 2,
-          link: '/contact',
-          subTitle: 'Contact Us',
-        },
-        {
           id: 3,
           link: '/services',
           subTitle: 'Services',
@@ -55,11 +50,6 @@ const Footer = () => {
           subTitle: 'Browser Jobs',
         },
         {
-          id: 3,
-          link: '/jobdetails',
-          subTitle: 'Job Details',
-        },
-        {
           id: 4,
           link: '/bookmarkjobs',
           subTitle: 'Bookmark Jobs',
@@ -78,7 +68,7 @@ const Footer = () => {
         {
           id: 2,
           link: '/candidategrid',
-          subTitle: 'Candidate Grid',
+          subTitle: 'Candidates',
         },
         {
           id: 3,
@@ -95,16 +85,6 @@ const Footer = () => {
           id: 1,
           link: '/contact',
           subTitle: 'Help Center',
-        },
-        {
-          id: 2,
-          link: '/faqs',
-          subTitle: 'FAQ\'S',
-        },
-        {
-          id: 3,
-          link: '/privacyandpolicy',
-          subTitle: 'Privacy Policy',
         },
       ],
     },
@@ -134,9 +114,8 @@ const Footer = () => {
           <Row>
             <Col lg={4}>
               <div className="footer-item mt-4 mt-lg-0 me-lg-5">
-                <h4 className="text-white mb-4">Jobcy</h4>
-                <p className="text-white-50">It is a long established fact that a reader will be of a page reader
-                                    will be of at its layout.</p>
+                <h4 className="text-white mb-4">Savior</h4>
+                <p className="text-white-50">취직에 대한 고민이 없이 인생을 최대한 도와주는 친구가 될 것이다.</p>
                 <p className="text-white mt-3">Follow Us on:</p>
                 <ul className="footer-social-menu list-inline mb-0" >
                   {(footerIcons).map((footerIcondetails, key) => (
@@ -167,9 +146,7 @@ const Footer = () => {
           <Row >
             <Col lg={12}>
               <p className="text-white-50 text-center mb-0">
-                {new Date().getFullYear()} &copy; Jobcy - Job Listing Page
-                                Template by <Link to="//themesdesign.in/" target="_blank"
-                  className="text-reset text-decoration-underline">Themesdesign</Link>
+                {new Date().getFullYear()} &copy; Savior - Job Search Platform
               </p>
             </Col>
           </Row>

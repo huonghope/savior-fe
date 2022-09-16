@@ -13,7 +13,7 @@ const Subscribe = () => {
             <Col lg={6}>
               <div className="text-center text-lg-start">
                 <h4 className="text-white">Get New Jobs Notification!</h4>
-                <p className="text-white-50 mb-0">Subscribe & get all related jobs notification.</p>
+                <p className="text-white-50 mb-0">이메일을 입력하면 좋은 정보를 전달해드립니다.</p>
               </div>
             </Col>
             <Col lg={6}>

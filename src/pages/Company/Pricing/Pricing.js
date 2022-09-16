@@ -8,7 +8,7 @@ const Pricing = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Pricing | Jobcy - Job Listing Template | Themesdesign</title>
+        <title>Pricing </title>
       </MetaTags>
       <Section/>
       <PricingPage/>

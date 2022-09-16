@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Col, Row, Modal, ModalBody, Input, Label} from 'reactstrap';
 import {Link} from 'react-router-dom';
+import {jobVacancy} from '../../../assets/data/data';
 
 
 // Job Images
@@ -14,92 +15,7 @@ const JobVacancy = () => {
   const [modal, setModal] = useState(false);
   const openModal = () => setModal(!modal);
 
-  const jobVacancyNew = [
-    {
-      id: 5,
-      companyImg: jobImage5,
-      jobDescription: 'Product Designer',
-      experience: '0-5 Yrs Exp.',
-      companyName: 'Jobcy Technology Pvt.Ltd',
-      location: 'California',
-      salary: '$250 - $800 / month',
-      internship: true,
-      timing: 'Freelance',
-      addclassNameBookmark: false,
-      badges: [],
-
-    },
-    {
-      id: 6,
-      companyImg: jobImage6,
-      jobDescription: 'Project Manager',
-      experience: '0-2 Yrs Exp.',
-      companyName: 'Jobcy Technology Pvt.Ltd',
-      location: 'California',
-      salary: '$250 - $800 / month',
-      fullTime: true,
-      timing: 'Freelance',
-      addclassNameBookmark: true,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-warning',
-          badgeName: 'Urgent',
-        },
-        {
-          id: 2,
-          badgeclassName: 'bg-soft-info',
-          badgeName: 'Private',
-        },
-      ],
-
-    },
-    {
-      id: 7,
-      companyImg: jobImage7,
-      jobDescription: 'HTML Developer',
-      experience: '0-2 Yrs Exp.',
-      companyName: 'Jobcy Technology Pvt.Ltd',
-      location: 'California',
-      salary: '$250 - $800 / month',
-      freeLance: true,
-      timing: 'Freelance',
-      addclassNameBookmark: false,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-warning',
-          badgeName: 'Urgent',
-        },
-        {
-          id: 2,
-          badgeclassName: 'bg-soft-info',
-          badgeName: 'Private',
-        },
-      ],
-
-    },
-    {
-      id: 8,
-      companyImg: jobImage8,
-      jobDescription: 'Business Associate',
-      experience: '0-2 Yrs Exp.',
-      companyName: 'Jobcy Technology Pvt.Ltd',
-      location: 'California',
-      salary: '$250 - $800 / month',
-      partTime: true,
-      timing: 'Part Time',
-      addclassNameBookmark: false,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: 'bg-soft-warning',
-          badgeName: 'Urgent',
-        },
-      ],
-
-    },
-  ];
+  const jobVacancyNew = jobVacancy.slice(4, 9);
   return (
     <React.Fragment>
       {jobVacancyNew.map((jobVacancyNewDetails, key) => (
@@ -113,13 +29,13 @@ const JobVacancy = () => {
         >
           <div className="p-4">
             <Row >
-              <Col lg={2}>
+              <Col lg={5}>
                 <Link to="/companydetails"><img src={jobVacancyNewDetails.companyImg} alt="" className="img-fluid rounded-3" /></Link>
               </Col>
-              <Col lg={10}>
+              <Col lg={7}>
                 <div className="mt-3 mt-lg-0">
                   <h5 className="fs-17 mb-1">
-                    <Link to="/jobdetails" className="text-dark">{jobVacancyNewDetails.jobDescription}</Link>
+                    <Link to={`/jobdetails?id=${jobVacancyNewDetails.id}`} className="text-dark">{jobVacancyNewDetails.jobDescription}</Link>
                     <small className="text-muted fw-normal">({jobVacancyNewDetails.experience})</small></h5>
                   <ul className="list-inline mb-0">
                     <li className="list-inline-item">
@@ -169,16 +85,14 @@ const JobVacancy = () => {
               <Col md={8}>
                 <div>
                   <ul className="list-inline mb-0">
-                    <li className="list-inline-item"><i className="uil uil-tag"></i> Keywords :</li>
-                    <li className="list-inline-item"><Link to="#" className="primary-link text-muted">Ui designer</Link>,</li>
-                    <li className="list-inline-item"><Link to="#" className="primary-link text-muted">developer</Link></li>
+                    <li className="list-inline-item"><i className="uil uil-tag"></i><span style={{color: 'red'}}>입사지원</span></li>
                   </ul>
                 </div>
               </Col>
 
               <Col md={4} >
                 <div className="text-md-end">
-                  <Link to="#applyNow" onClick={openModal} className="primary-link">Apply Now <i className="mdi mdi-chevron-double-right"></i></Link>
+                  <Link to="#applyNow" onClick={openModal} className="primary-link">지금 지원 <i className="mdi mdi-chevron-double-right"></i></Link>
                 </div>
               </Col>
             </Row>

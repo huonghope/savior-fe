@@ -9,7 +9,7 @@ const BookMarkJobs = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Bookmarks Jobs | Jobcy - Job Listing Template | Themesdesign</title>
+        <title>Bookmarks Jobs </title>
       </MetaTags>
       <Section />
       <section className="section">

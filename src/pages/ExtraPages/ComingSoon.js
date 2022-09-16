@@ -43,7 +43,7 @@ const ComingSoon = () => {
         <div className="main-content">
           <div className="page-content">
             <MetaTags>
-              <title>Coming Soon | Jobcy - Job Listing Template | Themesdesign</title>
+              <title>Coming Soon </title>
             </MetaTags>
             <section className="bg-coming-soon bg-auth">
               <Container >

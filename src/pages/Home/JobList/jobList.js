@@ -31,10 +31,10 @@ const JobList = () => {
           <Row className="justify-content-center">
             <Col lg={6}>
               <div className="section-title text-center mb-4 pb-2">
-                <h4 className="title">New & Random Jobs</h4>
+                <h4 className="title">추천 직무</h4>
                 <p className="text-muted mb-1">
-                  Post a job to tell us about your project. We will quickly match
-                  you with the right freelancers.
+                  작성한 이력서의 내용을 인공지능을 통해서 <br></br>
+                  가장 적합하는 직무 및 회사를 추천합니다.
                 </p>
               </div>
             </Col>

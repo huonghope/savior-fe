@@ -7,7 +7,7 @@ const PrivacyAndPolicy = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Privacy & Policy | Jobcy - Job Listing Template | Themesdesign</title>
+        <title>Privacy & Policy </title>
       </MetaTags>
       <Section/>
       <PrivacyAndPolicyPage/>

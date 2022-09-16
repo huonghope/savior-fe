@@ -17,33 +17,26 @@ import {
 import {Link} from 'react-router-dom';
 
 // import images
+import flagKr from '../../assets/images/flags/kr.jpg';
+import flagVn from '../../assets/images/flags/vn.jpg';
 import flagUs from '../../assets/images/flags/us.jpg';
-import flagSp from '../../assets/images/flags/spain.jpg';
-import flagGr from '../../assets/images/flags/germany.jpg';
-import flagIt from '../../assets/images/flags/italy.jpg';
-import flagRu from '../../assets/images/flags/russia.jpg';
 
 const TopBar = () => {
   const iconTobar = [
     {
       id: 1,
-      classname: 'uil uil-whatsapp',
+      classname: 'uil uil-facebook-messenger-alt',
+      link: 'https://www.facebook.com/',
     },
     {
       id: 2,
-      classname: 'uil uil-facebook-messenger-alt',
+      classname: 'uil uil-linkedin-alt',
+      link: 'https://www.linkedin.com/in/huong-nguyen-dinh-177529228/',
     },
     {
       id: 3,
-      classname: 'uil uil-instagram',
-    },
-    {
-      id: 4,
-      classname: 'uil uil-envelope',
-    },
-    {
-      id: 5,
       classname: 'uil uil-twitter-alt',
+      link: 'https://twitter.com/dhuong0929',
     },
   ];
   // Language Dropdown
@@ -53,8 +46,18 @@ const TopBar = () => {
 
   // Signup Modal
   const [modal, setModal] = useState(false);
-
   const openModal = () => setModal(!modal);
+
+  const [modalSignIn, setModalSignIn] = useState(false);
+  const openModalSignIn = () => setModalSignIn(!modalSignIn);
+
+  const handleLogin = () => {
+    alert('Coming soon !!!');
+  };
+
+  const handleJoin = () => {
+    alert('Coming soon !!!');
+  };
 
   return (
     <React.Fragment>
@@ -68,7 +71,7 @@ const TopBar = () => {
                     {' '}
                     <i className="mdi mdi-map-marker"></i> Your Location:{' '}
                     <Link to="#" className="text-dark">
-                      New Caledonia
+                      Seoul, South Korea
                     </Link>
                   </p>
                 </li>
@@ -76,18 +79,79 @@ const TopBar = () => {
                   <ul className="topbar-social-menu list-inline mb-0">
                     {(iconTobar || []).map((icon, key) => (
                       <li className="list-inline-item" key={key}>
-                        <Link to="/" className="social-link">
+                        <a href={icon.link} className="social-link" target='_blank' rel="noopener noreferrer">
                           <i className={icon.classname}></i>
-                        </Link>
+                        </a>
                       </li>
                     ))}
                   </ul>
                 </li>
               </ul>
             </Col>
-
             <Col md={5}>
               <ul className="list-inline mb-0 text-center text-md-end">
+                <li className="list-inline-item py-2 me-2 align-middle">
+                  <span
+                    onClick={openModalSignIn}
+                    role="button"
+                    className="text-dark fw-medium fs-13"><i className='uil uil-user-circle'></i>
+                    Sign In</span>
+                  <Modal isOpen={modalSignIn} toggle={openModalSignIn} role="dialog" centered>
+                    <ModalBody className="p-5">
+                      <div className="position-absolute end-0 top-0 p-3">
+                        <button
+                          type="button"
+                          className="btn-close"
+                          onClick={openModalSignIn}
+                        ></button>
+                      </div>
+                      <div className="auth-content">
+                        <div className="w-100">
+                          <div className="text-center mb-4">
+                            <h5>Sign In</h5>
+                          </div>
+                          <Form action="#" className="auth-form">
+
+                            <FormGroup className="mb-3">
+                              <Label
+                                htmlFor="usernameInput"
+                                className="form-label"
+                              >
+                              Username
+                              </Label>
+                              <Input
+                                type="text"
+                                className="form-control"
+                                id="usernameInput"
+                                placeholder="Enter your username"
+                              />
+                            </FormGroup>
+                            <FormGroup className="mb-3">
+                              <label htmlFor="passwordInput" className="form-label">
+                              Password
+                              </label>
+                              <Input
+                                type="password"
+                                className="form-control"
+                                id="passwordInput"
+                                placeholder="Password"
+                              />
+                            </FormGroup>
+                            <div className="text-center">
+                              <button
+                                onClick={() => handleLogin()}
+                                type="submit"
+                                className="btn btn-primary w-100"
+                              >
+                              Sign In
+                              </button>
+                            </div>
+                          </Form>
+                        </div>
+                      </div>
+                    </ModalBody>
+                  </Modal>
+                </li>
                 <li className="list-inline-item py-2 me-2 align-middle">
                   <span
                     onClick={openModal}
@@ -98,7 +162,6 @@ const TopBar = () => {
                     Sign Up
                   </span>
                   <Modal isOpen={modal} toggle={openModal} role="dialog" centered>
-
                     <ModalBody className="p-5">
                       <div className="position-absolute end-0 top-0 p-3">
                         <button
@@ -179,6 +242,7 @@ const TopBar = () => {
                             </FormGroup>
                             <div className="text-center">
                               <button
+                                onClick={() => handleJoin()}
                                 type="submit"
                                 className="btn btn-primary w-100"
                               >
@@ -212,7 +276,7 @@ const TopBar = () => {
                   >
                     <DropdownToggle tag="button" type="button" className="btn">
                       <img
-                        src={flagUs}
+                        src={flagKr}
                         alt=""
                         height="16"
                       />
@@ -225,12 +289,12 @@ const TopBar = () => {
                         data-lang="eng"
                       >
                         <img
-                          src={flagUs}
+                          src={flagVn}
                           alt=""
                           className="me-1"
                           height="12"
                         />
-                        <span className="align-middle">English</span>
+                        <span className="align-middle">VietNam</span>
                       </DropdownItem>
                       <DropdownItem
                         to="/"
@@ -238,51 +302,12 @@ const TopBar = () => {
                         data-lang="sp"
                       >
                         <img
-                          src={flagSp}
+                          src={flagUs}
                           alt=""
                           className="me-1"
                           height="12"
                         />
-                        <span className="align-middle">Spanish</span>
-                      </DropdownItem>
-                      <DropdownItem
-                        to="/"
-                        className="dropdown-item notify-item language"
-                        data-lang="gr"
-                      >
-                        <img
-                          src={flagGr}
-                          alt=""
-                          className="me-1"
-                          height="12"
-                        />
-                        <span className="align-middle">German</span>
-                      </DropdownItem>
-                      <DropdownItem
-                        to="/"
-                        className="dropdown-item notify-item language"
-                        data-lang="it"
-                      >
-                        <img
-                          src={flagIt}
-                          alt=""
-                          className="me-1"
-                          height="12"
-                        />
-                        <span className="align-middle">Italian</span>
-                      </DropdownItem>
-                      <DropdownItem
-                        to="/"
-                        className="dropdown-item notify-item language"
-                        data-lang="ru"
-                      >
-                        <img
-                          src={flagRu}
-                          alt=""
-                          className="me-1"
-                          height="12"
-                        />
-                        <span className="align-middle">Russian</span>
+                        <span className="align-middle">English</span>
                       </DropdownItem>
                     </DropdownMenu>
                   </Dropdown>

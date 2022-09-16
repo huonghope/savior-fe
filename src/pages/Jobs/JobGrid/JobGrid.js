@@ -12,7 +12,7 @@ const JobGrid = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Job Grid | Jobcy - Job Listing Template | Themesdesign</title>
+        <title>Job Grid </title>
       </MetaTags>
       <Section/>
       <section className="section">

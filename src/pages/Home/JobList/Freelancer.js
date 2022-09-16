@@ -3,78 +3,14 @@ import {Col, Row, Modal, ModalBody, Input, Label} from 'reactstrap';
 import {Link} from 'react-router-dom';
 
 // jobImages
-import jobImage1 from '../../../assets/images/featured-job/img-01.png';
-import jobImage2 from '../../../assets/images/featured-job/img-02.png';
-import jobImage3 from '../../../assets/images/featured-job/img-03.png';
-import jobImage4 from '../../../assets/images/featured-job/img-04.png';
+import {jobVacancy} from '../../../assets/data/data';
 
 const Freelancer = () => {
   // Apply Now Model
   const [modal, setModal] = useState(false);
   const openModal = () => setModal(!modal);
 
-  const freelancer = [
-    {
-      id: 1,
-      companyImg: jobImage1,
-      jobDescription: 'Web Developer',
-      companyName: 'Web Technology pvt.Ltd',
-      location: 'Oakridge Lane ssRichardson',
-      salary: '1000-1200/m',
-      freelancer: true,
-      timing: 'Freelancer',
-      catogary: 'Freelancer',
-      addclassNameBookmark: false,
-      badges: [],
-      experience: '1 - 2 years',
-      Notes: 'languages only differ in their grammar.',
-    },
-    {
-      id: 2,
-      companyImg: jobImage2,
-      jobDescription: 'Business Associate',
-      companyName: 'Pixel Technology pvt.Ltd',
-      location: 'Dodge City, Louisiana',
-      salary: '800-1800/m',
-      freelancer: true,
-      timing: 'Freelancer',
-      catogary: 'Freelancer',
-      addclassNameBookmark: false,
-      badges: [],
-      experience: '0 - 1 years',
-      Notes: 'languages only differ in their grammar.',
-    },
-    {
-      id: 3,
-      companyImg: jobImage3,
-      jobDescription: 'Digital Marketing Manager',
-      companyName: 'Jobcy Technology Pvt.Ltd',
-      location: 'Phoenix, Arizona',
-      salary: '1500-2400/m',
-      freelancer: true,
-      timing: 'Freelancer',
-      catogary: 'Freelancer',
-      addclassNameBookmark: true,
-      badges: [],
-      experience: '4+ years',
-      Notes: null,
-    },
-    {
-      id: 4,
-      companyImg: jobImage4,
-      jobDescription: 'Product Director',
-      companyName: 'Creative Agency',
-      location: 'Escondido, California',
-      salary: '1500-2400/m',
-      freelancer: true,
-      timing: 'Freelancer',
-      catogary: 'Freelancer',
-      addclassNameBookmark: true,
-      badges: [],
-      experience: '2 - 3 years',
-      Notes: null,
-    },
-  ];
+  const freelancer = jobVacancy.slice(3, 7);
 
   return (
     <React.Fragment>
@@ -209,7 +145,7 @@ const Freelancer = () => {
       ))}
       <div className="text-center mt-4 pt-2">
         <Link to="/joblist" className="btn btn-primary">
-          View More <i className="uil uil-arrow-right"></i>
+          더 보기 <i className="uil uil-arrow-right"></i>
         </Link>
       </div>
 

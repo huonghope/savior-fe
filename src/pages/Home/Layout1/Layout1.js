@@ -8,7 +8,7 @@ const Layout1 = () => {
   return (
     <div>
       <MetaTags>
-        <title>Home | Jobcy - Job Listing Template | Themesdesign</title>
+        <title>Home </title>
         <script src="https://unicons.iconscout.com/release/v3.0.2/script/monochrome/bundle.js"></script>
       </MetaTags>
       <Section/>

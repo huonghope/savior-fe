@@ -59,7 +59,7 @@ const Features = () => {
             <Col lg={7}>
               <div className="section-title text-center mb-5">
                 <h3 className="title mb-4">Key Features</h3>
-                <p className="para-desc text-muted mx-auto">Start working with Jobcy that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                <p className="para-desc text-muted mx-auto">여러분 자신을 돌아보고, 이해하며 긍정적인 측면을 찾도록 도와 주는 심성수련으로, 자기성장을 돕고, 자신감과 구직욕구를 더 높여 드리기 위한 플랫폼입니다.</p>
               </div>
             </Col>
           </Row>

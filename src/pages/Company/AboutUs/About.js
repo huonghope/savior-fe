@@ -16,9 +16,8 @@ const About = () => {
             <Col lg={6}>
               <div className="section-title me-lg-5">
                 <h6 className="sub-title">About Us</h6>
-                <h2 className="title mb-4">Why <span className="text-warning fw-bold">35,000+</span> People Trust On Jobcy?</h2>
-                <p className="text-muted">Start working with Jobcy that can provide everything you need to generate awareness, drive traffic, connect.
-                Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with real content.</p>
+                <h2 className="title mb-4">Why <span className="text-warning fw-bold">35,000+</span> People Trust On Savior?</h2>
+                <p className="text-muted">취업에 도움이 필요하신 분들에게 자신을 돌아보고 이해하며 긍정적인 측면을 찾도록 하여 자신감 회복과 취업 희망(인간관계 향상과 취업 및 원만한 사회생활 적응)을 돕는 플랫폼입니다.</p>
 
                 <Row mt={4} pt={2}>
                   <Col md={6}>

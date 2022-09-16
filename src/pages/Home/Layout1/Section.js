@@ -14,9 +14,9 @@ const section = () => {
           <Row className="justify-content-center">
             <Col lg={8}>
               <div className="text-center text-white mb-5">
-                <h1 className="display-5 fw-semibold mb-3">Search Between More Then <span className="text-warning fw-bold">10,000+ </span>
-                                    Open Jobs.</h1>
-                <p className="fs-17">Find jobs, create trackable resumes and enrich your applications.</p>
+                <h1 className="display-5 fw-semibold mb-3">더 많은 등록 및 검색 한 <span className="text-warning fw-bold">10,000+ </span>
+                                    오픈 직무.</h1>
+                <p className="fs-17">이력서를 업데이트마면 이를 분석을 통해서 작합하고하는 직무를 추천해주는 플랫품</p>
               </div>
             </Col>
           </Row>
@@ -59,10 +59,10 @@ const section = () => {
             <Col lg={12}>
               <ul className="treding-keywords list-inline mb-0 text-white-50 mt-4 mt-lg-3 text-center">
                 <li className="list-inline-item text-white"><i className="mdi mdi-tag-multiple-outline text-warning fs-18"></i> Trending Keywords:</li>
-                <li className="list-inline-item"><Link to="#">Design,</Link></li>
-                <li className="list-inline-item"><Link to="#">Development,</Link></li>
-                <li className="list-inline-item"><Link to="#">Manager,</Link></li>
-                <li className="list-inline-item"><Link to="#">Senior</Link></li>
+                <li className="list-inline-item"><Link to="#">디자인,</Link></li>
+                <li className="list-inline-item"><Link to="#">개발자,</Link></li>
+                <li className="list-inline-item"><Link to="#">관리자,</Link></li>
+                <li className="list-inline-item"><Link to="#">초보자</Link></li>
               </ul>
             </Col>
 
