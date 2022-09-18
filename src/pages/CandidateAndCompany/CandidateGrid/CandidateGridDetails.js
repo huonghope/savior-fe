@@ -178,7 +178,10 @@ const CandidateGridDetails = () => {
           </div>
         </Col>
       </Row>
-      <div className="candidate-list">
+      <div className="text-center">
+        <h1>Coming soon</h1>
+      </div>
+      {/* <div className="candidate-list">
         <Row>
           {candidategridDetails.map((candidategridDetailsNew, key) => (
             <Col lg={4} md={6} key={key}>
@@ -309,7 +312,7 @@ const CandidateGridDetails = () => {
             </Modal>
           </div>
         </div>
-      </div>
+      </div> */}
     </React.Fragment>
   );
 };

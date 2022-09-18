@@ -155,28 +155,28 @@ const NavBar = (props) => {
                 </Link>
                 <div className={classname('dropdown-menu dropdown-menu-lg dropdown-menu-center', {show: pages})} aria-labelledby="pagesdoropdown">
                   <Row>
-                    <Col lg={4}>
+                    <Col lg={6}>
                       <span className="dropdown-header">Jobs</span>
                       <div>
                         {/* <Link className="dropdown-item" to="/joblist2">Job List</Link> */}
                         {/* <Link className="dropdown-item" to="/joblist2">Job List-2</Link> */}
-                        <Link className="dropdown-item" to="/jobgrid">Jobs</Link>
+                        <Link className="dropdown-item" to="/jobgrid">Job List</Link>
                         {/* <Link className="dropdown-item" to="/jobgrid2">Job Grid-2</Link> */}
-                        <Link className="dropdown-item" to="/jobdetails">Job Details</Link>
-                        <Link className="dropdown-item" to="/jobscategories">Jobs Categories</Link>
+                        {/* <Link className="dropdown-item" to="/jobdetails">Job Details</Link> */}
+                        {/* <Link className="dropdown-item" to="/jobscategories">Jobs Categories</Link> */}
                       </div>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={6}>
                       <span className="dropdown-header">Candidates / Companys</span>
                       <div>
                         {/* <Link className="dropdown-item" to="/candidatelist">Candidate List</Link> */}
                         <Link className="dropdown-item" to="/candidategrid">Candidate List</Link>
-                        <Link className="dropdown-item" to="/candidatedetails">Candidate Details</Link>
-                        <Link className="dropdown-item" to="/companylist">Company List</Link>
-                        <Link className="dropdown-item" to="/companydetails">Company Details</Link>
+                        {/* <Link className="dropdown-item" to="/candidatedetails">Candidate Details</Link> */}
+                        {/* <Link className="dropdown-item" to="/companylist">Company List</Link> */}
+                        {/* <Link className="dropdown-item" to="/companydetails">Company Details</Link> */}
                       </div>
                     </Col>
-                    <Col lg={4}>
+                    {/* <Col lg={4}>
                       <span className="dropdown-header">Extra Pages</span>
                       <div>
                         <Link className="dropdown-item" to="/signup">Sign Up</Link>
@@ -187,7 +187,7 @@ const NavBar = (props) => {
                         <Link className="dropdown-item" to="/error404">404 Error</Link>
                         <Link className="dropdown-item" to="/components">Components</Link>
                       </div>
-                    </Col>
+                    </Col> */}
                   </Row>
                 </div>
               </li>

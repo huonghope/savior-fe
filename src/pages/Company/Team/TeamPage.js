@@ -17,13 +17,6 @@ const TeamPage = () => {
       teamMemberPosition: 'Founder & CEO',
 
     },
-    {
-      id: 2,
-      teamMemberImage: teamMemberImage10,
-      teamMemberName: 'Hoang TUng',
-      teamMemberPosition: 'Data Analyst',
-
-    },
   ];
   return (
     <React.Fragment>

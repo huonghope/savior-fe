@@ -10,13 +10,8 @@ import userImage3 from '../../../assets/images/user/img-03.jpg';
 
 // Blog Images
 import blogImage4 from '../../../assets/images/blog/img-04.jpg';
-import blogImage5 from '../../../assets/images/blog/img-05.jpg';
-import blogImage6 from '../../../assets/images/blog/img-06.jpg';
-import blogImage7 from '../../../assets/images/blog/img-07.jpg';
-import blogImage8 from '../../../assets/images/blog/img-08.jpg';
-import blogImage9 from '../../../assets/images/blog/img-09.jpg';
-import blogImage10 from '../../../assets/images/blog/img-10.jpg';
-
+import blogImage5 from '../../../assets/images/blog/blog5.jpg';
+import blogImage6 from '../../../assets/images/blog/blog6.jpg';
 
 const BlogContent = () => {
   const blogContentText = [
@@ -25,87 +20,26 @@ const BlogContent = () => {
       blogRow: [
         {
           id: 1,
-          blogImage: blogImage6,
-          blogTitle: 'Fashion',
-          blogDate: 'July 29, 2021',
-          blogHeading: 'A day in the of a professional fashion designer',
-          blogText: `Objectively pursue diverse catalysts for change for interoperable meta-services. 
-          Distinctively re-engineer revolutionary meta-services and premium architectures. 
-          Intrinsically incubate intuitive opportunities and real-time potentialities. Appropriately communicate one-to-one technology.`,
-          blogAutherImage: userImage2,
-          blogAutherName: 'Rebecca Swartz',
-          BlogAutherPosition: 'Fashion Designer',
-        },
-        {
-          id: 2,
           blogImage: blogImage5,
-          blogTitle: 'Business',
-          blogDate: 'July 25, 2021',
-          blogHeading: 'Stack designer Olivia Murphy offers freelancing advice',
-          blogText: `Objectively pursue diverse catalysts for change for interoperable meta-services. 
-          Distinctively re-engineer revolutionary meta-services and premium architectures. 
-          Intrinsically incubate intuitive opportunities and real-time potentialities. Appropriately communicate one-to-one technology.`,
-          blogAutherImage: userImage3,
-          blogAutherName: 'Olivia Murphy',
-          BlogAutherPosition: 'Product Leader',
-        },
-      ],
-    },
-    {
-      id: 2,
-      blogRow: [
-
-        {
-          id: 1,
-          blogImage: blogImage7,
-          blogTitle: 'Business',
-          blogDate: 'July 25, 2021',
-          blogHeading: 'Manage white space in responsive layouts ?',
-          blogText: `Objectively pursue diverse catalysts for change for interoperable meta-services. 
-          Distinctively re-engineer revolutionary meta-services and premium architectures. 
-          Intrinsically incubate intuitive opportunities and real-time potentialities. Appropriately communicate one-to-one technology.`,
+          blogTitle: 'PPT',
+          blogDate: 'July 29, 2022',
+          blogHeading: '팀장님께 칭찬받는 PPT 만드는 진짜 비법 7가지',
+          blogText: `마케터는 다 PPT를 기깔나게 만들 수 있다? 삑. 정답은 아니요.
+          나는 디자인이 재밌다는 이유로 광고홍보를 전공하면서 4년내내 툭 치면 나오는 자판기처럼 PPT를 생산해왔지만 내 주위에는 파워포인트를 켜본적도 없이 졸업한 동기들도 많다.`,
           blogAutherImage: userImage2,
-          blogAutherName: 'Olivia Murphy',
-          BlogAutherPosition: 'Product Leader',
+          blogAutherName: '안나이',
+          BlogAutherPosition: '디자인너',
         },
         {
           id: 2,
-          blogImage: blogImage8,
-          blogTitle: 'Development',
-          blogDate: 'July 29, 2021',
-          blogHeading: 'How to get creative in your work ?',
-          blogText: 'Objectively pursue diverse catalysts for change for interoperable meta-services. Distinctively re-engineer revolutionary meta-services and premium architectures. Intrinsically incubate intuitive opportunities and real-time potentialities. Appropriately communicate one-to-one technology.',
+          blogImage: blogImage6,
+          blogTitle: '회사 문화',
+          blogDate: 'July 25, 2022',
+          blogHeading: '외국인이 본 대한민국의 기업문화',
+          blogText: `한국의 이점을 누리기 위한 외국인의 한국이주에 대한 정보에 앞서 외국인들이 신선하게 여기고 있는 한국에서의 구직 및 직장문화를 살펴보고자 한다.`,
           blogAutherImage: userImage3,
-          blogAutherName: 'Rebecca Swartz',
-          BlogAutherPosition: 'Fashion Designer',
-        },
-      ],
-    },
-    {
-      id: 3,
-      blogRow: [
-
-        {
-          id: 1,
-          blogImage: blogImage9,
-          blogTitle: 'Business',
-          blogDate: 'July 25, 2021',
-          blogHeading: 'What planning process needs ?',
-          blogText: 'Objectively pursue diverse catalysts for change for interoperable meta-services. Distinctively re-engineer revolutionary meta-services and premium architectures. Intrinsically incubate intuitive opportunities and real-time potentialities. Appropriately communicate one-to-one technology.',
-          blogAutherImage: userImage3,
-          blogAutherName: 'Olivia Murphy',
-          BlogAutherPosition: 'Product Leader',
-        },
-        {
-          id: 2,
-          blogImage: blogImage10,
-          blogTitle: 'Development',
-          blogDate: 'July 29, 2021',
-          blogHeading: 'How to become a best sale marketer in a year!',
-          blogText: 'Objectively pursue diverse catalysts for change for interoperable meta-services. Distinctively re-engineer revolutionary meta-services and premium architectures. Intrinsically incubate intuitive opportunities and real-time potentialities. Appropriately communicate one-to-one technology.',
-          blogAutherImage: userImage3,
-          blogAutherName: 'Rebecca Swartz',
-          BlogAutherPosition: 'Fashion Designer',
+          blogAutherName: '김동국',
+          BlogAutherPosition: '프로젝트 관리자',
         },
       ],
     },
@@ -155,7 +89,7 @@ const BlogContent = () => {
             </div>
           </Col>
 
-          {/* {(blogContentText).map((blogContentDetails, key) => (
+          {(blogContentText).map((blogContentDetails, key) => (
             <Row key={key}>
               {(blogContentDetails.blogRow).map((blogContentInner, key) => (
                 <Col lg={6} key={key}>
@@ -179,9 +113,9 @@ const BlogContent = () => {
                 </Col>
               ))}
             </Row>
-          ))} */}
+          ))}
 
-          {/* <Row >
+          <Row >
             <Col lg={12} className="mt-5">
               <nav aria-label="Page navigation example">
                 <ul className="pagination job-pagination mb-0 justify-content-center">
@@ -202,7 +136,7 @@ const BlogContent = () => {
                 </ul>
               </nav>
             </Col>
-          </Row> */}
+          </Row>
         </Container>
       </section>
 
