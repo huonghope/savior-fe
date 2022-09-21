@@ -207,7 +207,13 @@ const NavBar = (props) => {
                 </ul>
               </NavItem>
               <NavItem>
-                <Link className="nav-link" to="/contact">Contact</Link>
+                <Link className="nav-link" to={{pathname: 'http://docs.savior.fun/'}} target="_blank" >Documents</Link>
+              </NavItem>
+              <NavItem>
+                <Link className="nav-link" to={{pathname: 'http://cv-matching.savior.fun/'}} target="_blank" >CV Matching Demo</Link>
+              </NavItem>
+              <NavItem>
+                <Link className="nav-link" to={{pathname: 'http://elk.savior.fun/'}} target="_blank" >ELK Page</Link>
               </NavItem>
             </ul>
           </Collapse>

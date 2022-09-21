@@ -95,7 +95,7 @@ const BlogContent = () => {
                 <Col lg={6} key={key}>
                   <article className="post position-relative mt-4" key={key}>
                     <div className="post-preview overflow-hidden mb-3 rounded-3">
-                      <Link to="blog-details"><img src={blogContentInner.blogImage} alt="" className="img-fluid blog-img" /></Link>
+                      <Link to="blogdetails"><img src={blogContentInner.blogImage} alt="" className="img-fluid blog-img" /></Link>
                     </div>
                     <p className="text-muted mb-2"><b>{blogContentInner.blogTitle}</b> - {blogContentInner.blogDate}</p>
                     <h5 className="mb-3"><Link to="/blogdetails" className="primary-link">{blogContentInner.blogHeading}</Link></h5>

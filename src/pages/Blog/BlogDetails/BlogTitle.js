@@ -7,8 +7,8 @@ const BlogTitle = () => {
       <Row className="justify-content-center">
         <Col lg={7}>
           <div className="text-center mb-5">
-            <p className="text-danger fw-semibold mb-0">Fashion</p>
-            <h3>How to get creative in your work ?</h3>
+            <p className="text-danger fw-semibold mb-2">Blog</p>
+            <h3>Blog페이지에서 많은 좋은 정보를 참고하십시오.</h3>
           </div>
         </Col>
       </Row>
